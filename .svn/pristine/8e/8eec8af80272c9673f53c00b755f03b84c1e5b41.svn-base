@@ -1,0 +1,18 @@
+package com.indra.pjsf.pruebasDummy;
+
+import org.junit.Test;
+
+import com.indra.pjsf.tf.datos.MESA_GeneradorDeDatosDePrueba;
+
+public class MESA_GenerarDatosAgrupados {
+	
+	@Test
+	public void MESA_generadorDeDatosAcumulados(){
+		
+		MESA_GeneradorDeDatosDePrueba.MESA_generarDatosAgrupadosMovimientos();
+		
+		
+	}
+
+
+}
