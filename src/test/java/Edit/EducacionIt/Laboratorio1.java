@@ -1,52 +1,67 @@
 package Edit.EducacionIt;
 
-import java.util.concurrent.TimeUnit;
-
 import org.junit.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+
 import org.openqa.selenium.firefox.*;
 
 
 
-/* Ejercicio 
-1-Crear un proyecto Maven en Eclipse.
-2-Agregar dependencia en archivo pom.xml -> se puede encontrar en https://selenium.dev/
-3-Descargar driver de Selenium para chrome y firefox y ubicar ejecutables en ruta deseada
-4-Verificar dependencia Junit en archivo pom.xml
-
-5-Crear una clase estandar.
-Importar libreria de selenium: import org.openqa.selenium.*; 
-Importar libreria junit: import org.junit.*;
-importar libreria: import org.openqa.selenium.chrome.ChromeDriver;
--Instanciar chrome Driver
-6-setear propiedades de chrome driver
-7-Ir a url de prueba: http://newtours.demoaut.com/ 
-8-Cerrar navegador
-9-Repetir los pasos 4 a 7 pero para navagador Firefox: importar libreria firefox:import org.openqa.selenium.firefox.*;
-10-Localizar elemento por ID
-11-Enviar datos a elementos con sendkeys
-12-Cerrar navegador
-13-Modificar script y asignar elemento encontrado a una variable WebElement
-14-Agregar una espera antes de cerrar:  import java.util.concurrent.TimeUnit;
-
-*/
+	/* Laboratorio 1 - Ejercicio1:
+		-Crear un proyecto de Tipo Maven en eclipse con los siguientes datos:
+		Group Id: Edit
+		Artifact Id: EducacionIt
+		Version: Por defecto
+		Packaging: Por defecto:
+		
+		-Configurar proyecto para utilización de librerías de selenium agregando dependencias a archivo pom.xml.
+		-Verificar dependencia Junit en archivo pom.xml
+		-Abrir la clase AppTest.java que se genera automáticamente en la ruta src/test/java/Edit.EducacionIt e imprimir un “Hola mundo”
+		-Correr Test y verificar resultado en consola y en Junit
+		-Crear una nueva clase estándar con nombre Laboratorio1 e importar librerías de selenium y junit manualmente
+		import org.junit.*;
+		import org.openqa.selenium.*;
+		-En la raíz del proyecto crear un Source folder con nombre Drivers
+		-Descargar Driver de selenium para navegador Chrome y para Firefox y ubicarlo en la carpeta creada en el paso anterior (La versión del driver a descargar debe ser compatible con la versión del navegador en cuestión).
+		-Volver a la clase creada y crear un test ingresando el comando @Test debajo de esta crear un método llamado lab1_E1.
+		-Importar librerías de controlador Chrome import org.openqa.selenium.chrome.ChromeDriver;
+		-Codificar dentro del método e Instanciar chrome Driver
+		-Codificar la configuración de propiedades de chrome driver
+		-Codificar ingreso a de prueba: https://selenium.dev/
+		-Codificar cierre de navegador
+		-Correr Test con Junit
+		-Verificar resultados
+ 	*/
 public class Laboratorio1 {
 	 
-	@Ignore
-	public void lab1(){
+	@Test
+	public void lab1_E1(){
 		//instanciar Driver de Chrome + importar libreria org.openqa.selenium.chrome.ChromeDriver
 		WebDriver d= new ChromeDriver();
 		//Propiedades para Ejecutar el driver de Chrome
-		System.setProperty("webdriver.chrome.driver","C:\\workplaces\\Trunk\\EducacionIt\\Drivers\\chromedriver63.exe");
+		System.setProperty("webdriver.chrome.driver","..\\Drivers\\chromedriver.exe");
 		//Ir a url
 		d.get("https://selenium.dev/");
 		//Cerrar navegador
 		d.quit();
 	}
+	
+	/* Laboratorio 2 - Ejercicio2:
+		-Volver a la clase creada en Ejercicio1 (Laboratorio1) y crear un nuevo test ingresando @Test y debajo de este un método publico llamado lab1_E2.
+		-Importar librerías de controlador Firefox
+		import org.openqa.selenium.firefox.*;
+		-Codificar dentro del método e Instanciar Firefox
+		-Codificar la configuración de propiedades de Firefox
+		-Codificar ingreso a de prueba: https://selenium.dev/
+		-Codificar cambio de tamaño del navegador para que maximice
+		-Codificar cierre de navegador
+		-Correr Test con Junit
+		-Verificar resultados
+	*/
+	
 	@Test
-	public void lab2(){
+	public void lab1_E2(){
 	
 		//Instancias Driver de Firefox + importar libreria	
 		
@@ -54,7 +69,7 @@ public class Laboratorio1 {
 		
 		//Propiedades para ejecutar el driver de Firefox	
 		
-		System.setProperty("webdriver.gecko.driver","C:\\workplaces\\Trunk\\EducacionIt\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver","..\\Drivers\\geckodriver.exe");
 		
 		d.get("https://selenium.dev/");
 		
@@ -67,9 +82,22 @@ public class Laboratorio1 {
 		//Cerrar el navegador
 		d.quit();
 	}
-	
+
+	/* Laboratorio 3 - Ejercicio 3:
+		-Volver a la clase creada en Ejercicio1 (Laboratorio1) y crear un nuevo test ingresando @Test y debajo de este un método llamado lab1_E3.
+		-Codificar dentro del método e Instanciar chrome Driver
+		-Codificar la configuración de propiedades de chrome driver
+		-Codificar ingreso a de prueba: https://selenium.dev/
+		-Codificar localización de elemento por id y asignarlo a una variable de tipo WebElement
+		-Codificar envío de datos a elemento input con texto
+		-Codificar envío de datos a elemento input con tecla rápida ENTER
+		-Codificar cierre de navegador
+		-Correr Test con Junit
+		-Verificar resultados.
+	 */
+
 	@Test
-	public void lab3(){
+	public void lab1_E3(){
 
 		WebDriver d= new ChromeDriver();
 		//Propiedades para Ejecutar el driver de Chrome.
